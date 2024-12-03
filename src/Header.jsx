@@ -33,7 +33,6 @@ return (
 );
 }
 
-
 export const BannerSection = () => {
     const [text, setText] = useState('');
     const words = ['Produced', 'Organized', 'Presented'];
@@ -87,60 +86,6 @@ export const BannerSection = () => {
     );
 };
 
-// export const CardSection = () => {
-//     const cards = [
-//         { title: "Card 1", description: "Description for card 1" },
-//         { title: "Card 2", description: "Description for card 2" },
-//         { title: "Card 3", description: "Description for card 3" },
-//         { title: "Card 4", description: "Description for card 4" },
-//     ];
-
-//     const settings = {
-//         dots: false,
-//         infinite: true,
-//         speed: 500,
-//         slidesToShow: 3,
-//         slidesToScroll: 1,
-//         centerMode: true,
-//         centerPadding: '0',
-//         arrows: false,
-//         responsive: [
-//             {
-//                 breakpoint: 1024,
-//                 settings: {
-//                     slidesToShow: 2,
-//                     slidesToScroll: 1,
-//                     centerMode: true,
-//                     centerPadding: '0',
-//                 }
-//             },
-//             {
-//                 breakpoint: 600,
-//                 settings: {
-//                     slidesToShow: 1,
-//                     slidesToScroll: 1,
-//                     centerMode: true,
-//                     centerPadding: '0',
-//                 }
-//             }
-//         ]
-//     };
-
-//     return (
-//         <section className='' style={{ background: 'url(/assets/img/bg/bh.jpg)' }}>
-//             <Slider {...settings}>
-//                 {cards.map((card, index) => (
-//                     <div key={index} className="p-4 !bg-white">
-//                         <div className=" rounded-lg p-6">
-//                             <h2 className="text-xl font-bold mb-2">{card.title}</h2>
-//                             <p>{card.description}</p>
-//                         </div>
-//                     </div>
-//                 ))}
-//             </Slider>
-//         </section>
-//     );
-// };
 export const CardSection = () => {
     const cards = [
         { title: "Card 1", description: "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Architecto, rerum soluta! Ab accusantium sapiente quibusdam nulla aut? Itaque, error eos!", imgSrc: "/assets/img/cid1.jpg" },
@@ -296,13 +241,12 @@ return (
 );
 }
 
-
 export const Competitions = ()=>{
    
-    const steps = [
-        { imgSrc: "/assets/img/comp/cone.png", title: "Step 1", description: "This is the first step.", icon: "🔍" },
-        { imgSrc: "/assets/img/comp/cone.png", title: "Step 2", description: "This is the second step.", icon: "✏️" },
-        { imgSrc: "/assets/img/comp/cone.png", title: "Step 3", description: "This is the third step.", icon: "✅" }, { imgSrc: "/assets/img/comp/cone.png", title: "Step 4", description: "This is the third step.", icon: "✅" },
+    const secondsteps = [
+        { imgSrc: "/assets/img/logo.png", title: "Step 1", description: "This is the first step.", icon: "🔍" },
+        { imgSrc: "/assets/img/logo.png", title: "Step 2", description: "This is the second step.", icon: "✏️" },
+        { imgSrc: "/assets/img/logo.png", title: "Step 3", description: "This is the third step.", icon: "✅" }, { imgSrc: "/assets/img/logo.png", title: "Step 4", description: "This is the third step.", icon: "✅" },
     ];
     
     return (
@@ -314,11 +258,11 @@ export const Competitions = ()=>{
             <span className="absolute left-0 top-14 w-full h-0.5 bg-gradient-to-r from-purple-400 via-pink-500 to-purple-800"></span>
                 </h1>
                 </div>
-            <div className="max-w-[90%] mx-auto grid grid-cols-1 md:grid-cols-4 gap-10">
-                {steps.map((step, index) => (
+            <div className="max-w-[90%] mx-auto grid grid-cols-1 md:grid-cols-4 gap-10 mt-5">
+                {secondsteps.map((step, index) => (
                     <div key={index} className="bg-black rounded-lg shadow-lg border">
-                        <div className="relative">
-                            <img src={step.imgSrc} alt={step.title} className=" w-full -mt-20 h-48 mb-4 transition-opacity duration-300 hover:opacity-0" />
+                        <div className="relative flex justify-center">
+                            <img src={step.imgSrc} alt={step.title} className=" size-32 -mt-20  mb-4 transition-opacity duration-300 hover:opacity-0" />
                           
                         </div>
                       <div className='p-5'>
